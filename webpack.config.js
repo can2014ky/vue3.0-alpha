@@ -16,6 +16,11 @@ const config = {
         filename: 'boundle.js',
         path: path.join(__dirname, 'dist')
     },
+    optimization: {
+        usedExports: true, // 模块只导出被使用的成员(按需加载)
+        concatenateModules: true, // 尽可能合并每一个模块到一个函数中
+        minimize: true, // 压缩输出结果
+    },
     module: {
         rules: [
             {
